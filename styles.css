@@ -16,6 +16,10 @@ body {
     background: #f8f9fa;
     color: #333;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 
 /* Container styling */
 .container {
@@ -246,6 +250,8 @@ header .container {
     padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
 }
 .card img{
     width: 60px;
@@ -376,13 +382,19 @@ project :hover {
 .contact-right form{
     width: 100%;
 }
+.container5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+}
 
 
 #contact-form {
     max-width: 600px;
     margin: 0 auto;
     text-align: left;
-}
+} 
 
 #contact-form label {
     display: block;
@@ -428,7 +440,7 @@ footer {
 /* Dark mode styles */
 body.dark-mode {
     background: #121212;
-    color: #e0e0e0;
+    color: white;
 }
 
 body.dark-mode header {
@@ -468,4 +480,9 @@ body.dark-mode .skill-card, body.dark-mode .education-card, body.dark-mode .proj
     .nav-links.mobile-active {
         display: flex;
     }
+}
+#msg{
+    color: rgb(4, 142, 4);
+    margin-top: -1px;
+    display: block;
 }

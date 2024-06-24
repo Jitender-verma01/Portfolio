@@ -217,8 +217,7 @@
     </section>
 
     <section id="contact" class="contact-section">
-        <div class="container">
-               <div class="row">
+        <div class="container5">
                   <div class="contact-left">
                       <h1 class="sub title">Contact me</h1>
                       <p><i><i class="fa-sharp fa-solid fa-paper-plane"></i></i> erjitendraverma7820@gmail.com</p>
@@ -229,24 +228,24 @@
                          <a href="https://www.instagram.com/_._jitendra_verma20"><i class="fa-brands fa-instagram"></i></a>
                          <a href="https://www.linkedin.com/in/jitendra-kumar-verma-619005238"><i class="fa-brands fa-linkedin"></i></a>
                       </div>
+                  </div>
                     
                     <div class="contact-right">
-                  <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="Name" placeholder="Your Name"  required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="Email" placeholder="Your Email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="Message" placeholder="Your Message" required></textarea>
-                
-                <button type="submit">Send</button>
-                </form>
-               </div>
+                        <form name="submit-to-google-sheet" id="contact-form">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="Name" placeholder="Your Name"  required>
+                            
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="Email" placeholder="Your Email" required>
+                            
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="Message" placeholder="Your Message" required></textarea>
+                            
+                            <button type="submit">Send</button>
+                        </form>
+                        <span id="msg"></span>
+                 </div>
             </div>
-            </div>
-       </div>
     </section>
 
     <footer>
@@ -254,5 +253,23 @@
     </footer>
     
     <script src="script.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxOMxdf4y3onsDXmIBpqZVtjkJ6l9fC9bI-hAG3lazCq2Sn0ooU-J8rL7Zsk5oBfMCq4g/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message send successfully "
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>  
 </html>
