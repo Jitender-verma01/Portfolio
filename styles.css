@@ -371,7 +371,7 @@ project :hover {
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #0d15f0;
+    color: black;
     display: inline-block;
     transition: transform 0.5s;
 }
