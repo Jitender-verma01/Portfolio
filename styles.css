@@ -480,6 +480,11 @@ body.dark-mode .skill-card, body.dark-mode .education-card, body.dark-mode .proj
     .nav-links.mobile-active {
         display: flex;
     }
+    .container5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 #msg{
     color: rgb(4, 142, 4);
