@@ -164,7 +164,7 @@ header .container {
     transition: background 0.3s;   
 }
 .hireMe:hover{
-    background: #e95c50;
+    background: #ca2111;
 }
 .CV{
     display: inline-block;
@@ -179,7 +179,7 @@ header .container {
 }
 
 .CV:hover{
-    background: #e95c50;
+    background: #ca2111;
 }
 
 /* Home section styling */
@@ -301,6 +301,7 @@ header .container {
 
 .education-card:hover {
     transform: translateY(-10px);
+    color: black;
 }
 
 .education-card h3 {
@@ -328,6 +329,7 @@ header .container {
 
 .project-card:hover {
     transform: translateY(-10px);
+    color: black;
 }
 
 .project-card h3 {
@@ -344,8 +346,8 @@ header .container {
     font-size: 1rem;
     transition: background 0.3s;
 }
-project :hover {
-    background: #e95c50;
+.project:hover {
+    background: #ca2111;
 }
 /* Contact section styling */
 .contact-section {
