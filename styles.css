@@ -301,7 +301,6 @@ header .container {
 
 .education-card:hover {
     transform: translateY(-10px);
-    color: black;
 }
 
 .education-card h3 {
@@ -329,7 +328,6 @@ header .container {
 
 .project-card:hover {
     transform: translateY(-10px);
-    color: black;
 }
 
 .project-card h3 {
@@ -457,8 +455,8 @@ body.dark-mode .skill-card, body.dark-mode .education-card, body.dark-mode .proj
     background: #333;
     border-color: #444;
 }
+
 body.dark-mode .contact-section{
-    /* color: #121212; */
     background-color: #444;
 }
 
