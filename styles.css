@@ -53,6 +53,7 @@ header .container {
     text-transform: uppercase;
     color: #ff6f61;
     cursor: pointer;
+
 }
 .logo:hover {
     filter: drop-shadow(0 0 30px  white );
@@ -72,11 +73,12 @@ header .container {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.2s;
 }
 
 .nav-links a:hover {
     color: #ff6f61;
+    text-decoration-line: underline;
 }
 
 .menu-toggle {
