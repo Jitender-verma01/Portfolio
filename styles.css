@@ -52,6 +52,10 @@ header .container {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #ff6f61;
+    cursor: pointer;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 30px  white );
 }
 
 .nav-links {
