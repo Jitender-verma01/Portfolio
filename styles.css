@@ -46,17 +46,14 @@ header .container {
     align-items: center;
 }
 
-.logo {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #ff6f61;
-    cursor: pointer;
 
+.logo img{
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 .logo:hover {
-    filter: drop-shadow(0 0 30px  white );
+    filter: drop-shadow(0 0 30px  #ca2111 );
 }
 
 .nav-links {
