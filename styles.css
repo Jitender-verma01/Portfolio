@@ -665,6 +665,15 @@ body.dark-mode .menu-toggle {
     .section, .about-section, .skills-section, .education-section, .projects-section, .contact-section {
         border-radius: 8px;
     }
+    .home-section {
+        flex-direction: column;
+        height: auto;
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+    .home-content {
+        padding-top: 0;
+    }
 }
 
 /* Dark mode glass effect */
@@ -693,4 +702,4 @@ body.dark-mode .projects-section,
 body.dark-mode .contact-section {
     background-color: #232323;
 }
-/*  */
+/* End of styles.css */
