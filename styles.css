@@ -103,6 +103,7 @@ header .container {
 /* Dark mode toggle */
 .mode-toggle {
     display: flex;
+
     align-items: center;
     cursor: pointer;
 }
@@ -195,12 +196,17 @@ header .container {
 }
 
 /* Home section styling */
+
 .home-section {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+body.dark-mode .home-section {
+    background: linear-gradient(135deg, #121212 0%, #232323 100%);
 }
 
 .home-content {
@@ -492,7 +498,6 @@ body.dark-mode .container{
     .nav-links li {
         margin: 1rem 0;
     }
-
     .menu-toggle {
         display: flex;
     }
@@ -516,4 +521,79 @@ body.dark-mode .container{
     color: rgb(4, 142, 4);
     margin-top: -1px;
     display: block;
+}
+//fix dark mode toggle position
+body.dark-mode .menu-toggle {
+    background: #444;
+    color: white;
+}
+// fix dark mode background
+body.dark-mode {
+    background: #121212;
+    color: white;
+}
+body.dark-mode header {
+    background: #1e1e1e;
+}
+body.dark-mode footer {
+    background: #1e1e1e;
+}
+
+body.dark-mode .skill-card, body.dark-mode .education-card, body.dark-mode .project-card {
+    background: #333;
+    border-color: #444;
+}
+
+body.dark-mode .contact-section{
+    background-color: #444;
+}
+
+body.dark-mode .container{
+    background-color: #121212;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .about-section{
+        margin-top: 50px;
+    }
+    .home-content{
+        padding-top: 40px;
+    }
+
+    .nav-links.mobile-active {
+        display: flex;
+    }
+    .container5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+#msg{
+    color: rgb(4, 142, 4);
+    margin-top: -1px;
+    display: block;
+}
+//fix dark mode toggle position
+body.dark-mode .menu-toggle {
+    background: #444;
+    color: white;
 }

@@ -20,3 +20,4 @@ document.addEventListener("DOMContentLoaded", () => {
     modeSwitch.checked = darkMode;
     body.classList.toggle('dark-mode', darkMode);
 });
+
