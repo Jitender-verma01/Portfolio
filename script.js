@@ -5,19 +5,40 @@ document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
 
     // Mobile menu toggle functionality
-    mobileMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('mobile-active');
-    });
+    if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-active');
+        });
+    }
+
+    // Message send button functionality
+    const sendButton = document.getElementById('send-button');
+    const messageInput = document.getElementById('message-input');
+    if (sendButton && messageInput) {
+        sendButton.addEventListener('click', () => {
+            const message = messageInput.value.trim();
+            if (message) {
+                // Add your message sending logic here, e.g., display or send to server
+                console.log('Message sent:', message);
+                messageInput.value = '';
+            }
+        });
+    }
 
     // Dark mode toggle functionality
-    modeSwitch.addEventListener('change', () => {
-        body.classList.toggle('dark-mode', modeSwitch.checked);
-        localStorage.setItem('dark-mode', modeSwitch.checked);
-    });
+    if (modeSwitch) {
+        modeSwitch.addEventListener('change', () => {
+            body.classList.toggle('dark-mode', modeSwitch.checked);
+            localStorage.setItem('dark-mode', modeSwitch.checked);
+        });
 
-    // Load dark mode preference from localStorage
-    const darkMode = localStorage.getItem('dark-mode') === 'true';
-    modeSwitch.checked = darkMode;
-    body.classList.toggle('dark-mode', darkMode);
+        // Load dark mode preference from localStorage
+        let darkMode = false;
+        if (typeof localStorage !== 'undefined') {
+            darkMode = localStorage.getItem('dark-mode') === 'true';
+        }
+        modeSwitch.checked = darkMode;
+        body.classList.toggle('dark-mode', darkMode);
+    }
 });
 

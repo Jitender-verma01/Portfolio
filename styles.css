@@ -522,12 +522,12 @@ body.dark-mode .container{
     margin-top: -1px;
     display: block;
 }
-//fix dark mode toggle position
+/* fix dark mode toggle position */
 body.dark-mode .menu-toggle {
     background: #444;
     color: white;
 }
-// fix dark mode background
+/* fix dark mode background */
 body.dark-mode {
     background: #121212;
     color: white;
@@ -592,8 +592,105 @@ body.dark-mode .container{
     margin-top: -1px;
     display: block;
 }
-//fix dark mode toggle position
+/* fix dark mode toggle position */
 body.dark-mode .menu-toggle {
     background: #444;
     color: white;
 }
+
+/* Add subtle section shadow and rounded corners */
+.section, .about-section, .skills-section, .education-section, .projects-section, .contact-section {
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(255, 111, 97, 0.08);
+    margin-bottom: 2rem;
+}
+
+/* Gradient accent for headings */
+.section h2 {
+    background: linear-gradient(90deg, #ff6f61 40%, #ffb199 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Add glassmorphism effect to cards */
+.skill-card, .education-card, .project-card {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    border: 1px solid #ff6f61;
+    box-shadow: 0 2px 16px rgba(255, 111, 97, 0.08);
+}
+
+/* Button glow effect */
+.hireMe, .CV, .project, #contact-form button {
+    box-shadow: 0 2px 8px rgba(255, 111, 97, 0.15);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hireMe:hover, .CV:hover, .project:hover, #contact-form button:hover {
+    box-shadow: 0 4px 16px rgba(202, 33, 17, 0.25);
+    transform: scale(1.05);
+}
+
+/* Social icons hover animation */
+.social-icons a {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6f61;
+    transform: scale(1.2) rotate(-8deg);
+}
+
+/* Profile photo border and glow */
+.profile-photo {
+    border: 4px solid #ff6f61;
+    box-shadow: 0 0 24px #ffb199;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.profile-photo:hover {
+    border-color: #ca2111;
+    box-shadow: 0 0 32px #ca2111;
+}
+
+/* Responsive card padding */
+@media (max-width: 768px) {
+    .skill-card, .education-card, .project-card {
+        padding: 1rem;
+    }
+    .section, .about-section, .skills-section, .education-section, .projects-section, .contact-section {
+        border-radius: 8px;
+    }
+}
+
+/* Dark mode glass effect */
+body.dark-mode .skill-card, body.dark-mode .education-card, body.dark-mode .project-card {
+    background: rgba(34,34,34,0.85);
+    border-color: #ff6f61;
+    box-shadow: 0 2px 16px rgba(255, 111, 97, 0.12);
+}
+body.dark-mode .section h2 {
+    background: linear-gradient(90deg, #ff6f61 40%, #ffb199 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+}
+
+body.dark-mode .profile-photo {
+    border: 4px solid #ff6f61;
+    box-shadow: 0 0 24px #ff6f61;
+}
+
+body.dark-mode .about-section,
+body.dark-mode .skills-section,
+body.dark-mode .education-section,
+body.dark-mode .projects-section,
+body.dark-mode .contact-section {
+    background-color: #232323;
+}
+/*  */
